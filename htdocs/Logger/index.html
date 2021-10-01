@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Style/WeighIn.css"/>
+    <link rel="stylesheet" href="Style/WeighOut.css"/>
+
+    <link rel="stylesheet" href="Style/MainStyle.css?v=1"/>
+    <link rel="stylesheet" href="Style/AddUser.css?v=1"/>
+    <link rel="stylesheet" href="Style/AddClient.css?v=1"/>
+    <link rel="stylesheet" href="Style/PriceSchedule.css"/>
+    <link rel="stylesheet" href="Style/Location.css"/>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="SideBar">
+        <div id="upSideBar">
+            <div></div>
+            <h1 class="CurrentUserText"></h1>
+            <div></div>
+        </div>
+       
+        <div id="sideButtonContainer">
+            <div class="SideBarSelections">
+                
+                <button class="ButtonSelected" id="TransactionButton">Input Transaction 
+                    <svg 
+                        class="ContentInvisible"
+                        xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20" width="20px" 
+                        fill="white" text-align="center" >
+                            <path d="M24 24H0V0h24v24z" 
+                            fill="none" opacity="1"/> <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20"
+                        width="20px" fill="white">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
+                    </svg>
+                </button>
+                
+               
+                <div>
+                    <ul class="SidebarOptionsContainer  ContentInvisible" id="TransactionOptionsContainer">
+                        <li>
+                            <div class="SubOptionButtons" id="WeighInSideButton">
+                                Weigh In
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="WeighOutSideButton">
+                                Weigh Out
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="PaymentSideButton">
+                                Payment
+                            </div>
+                        </li>
+                    </ul>
+                        
+                    
+                </div> 
+
+            </div>
+            
+            <div class="SideBarSelections">
+                <button class="SideBarButtons"  id="LogsButton">Reports 
+                    <svg 
+                        class="ContentInvisible"
+                        xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20" width="20px" 
+                        fill="white" text-align="center" >
+                        <path d="M24 24H0V0h24v24z" fill="none" opacity="1"/> 
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20"
+                        width="20px" fill="white">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
+                    </svg>
+                </button>
+
+                <div>
+                    <ul class="SidebarOptionsContainer ContentInvisible" id="LogsOptionsContainer" >
+                        <li>
+                            <div class="SubOptionButtons">
+                                Today's Report
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons">
+                                Past Reports
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons">
+                                Create Report
+                            </div>
+                        </li>
+                    </ul>
+                        
+                    
+                </div> 
+
+                
+            </div>
+
+            <div class="SideBarSelections" >
+                <button class="SideBarButtons " id="MaintenanceButton">Maintenance
+                    <svg 
+                        class="ContentInvisible"
+                        xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20" width="20px" 
+                        fill="white" text-align="center" >
+                            <path d="M24 24H0V0h24v24z" 
+                            fill="none" opacity="1"/> <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        height="20px" viewBox="0 0 20 20"
+                        width="20px" fill="white">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
+                    </svg>
+                </button>
+
+                <div>
+                    <ul class="SidebarOptionsContainer  ContentInvisible" id="MaintenanceOptionsContainer" >
+                        <li>
+                            <div class="SubOptionButtons" id="AddUsersButton">
+                                Add User
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="AddClientButton">
+                                Add Client
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="ClientListButton">
+                                List Clients
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="PriceSchedButton">
+                                Schedule Price
+                            </div>
+                        </li>
+                        <li>
+                            <div class="SubOptionButtons" id="LocationSideButton">
+                                Location List
+                            </div>
+                        </li>
+                    </ul>
+                        
+                    
+                </div> 
+            </div>
+            
+       
+            
+        </div>
+       
+    </div>
+    
+
+    <!--Input Transaction-->
+
+    <div id="Transaction_Container" class="ContentInvisible" >
+        <div id="TransactionContent_Container">
+            <div class="topContent"></div>
+
+            <div id="WeighInContainer" class="ContentInvisible">
+                
+                <form id="WeighInContent_Container" method="post" action="WeighIn.php">
+                    <div id="WeighInContentLeft">
+                        <h1 class="InputTypeText">Client Name</h1>
+                        <select id="WI_ClientNameCbox" name="WI_ClientNameText" class="CboxStyle"></select>
+                        <h1 class="InputTypeText">Location From</h1>
+                        <select id="WI_LocationFromCBox" name="WI_LocationFromText" class="CboxStyle"></select>
+                        <h1 class="InputTypeText">Driver Name</h1>
+                        <input type="text" name="WI_DriverNameText" id="WI_DriverNameText">
+                    </div>
+                    <hr>
+
+                    <div id="WeighInContentRight">
+                        <h1 class="InputTypeText">Transaction Type</h1>
+                        <select id="WI_TransacTypeCbox" name="WI_TransacTypeName" class="CboxStyle">
+                            <option value="Deliver">Deliver</option>
+                            <option value="Hakot">Hakot</option>
+                            <option value="Transfer">Transfer</option>
+                            <option value="Rider_Transfer">Rider Transfer</option>
+                            <option value="Sale">Sale</option>
+                        </select>
+                        <h1 class="InputTypeText">Location To</h1>
+                        <select id="WI_LocationToCBox" name="WI_LocationToText" class="CboxStyle"></select>
+                        <h1 class="InputTypeText">Plate Number</h1>
+                        <input type="text" name="WI_PlateNumberText" id="WI_PlateNumberText">
+                    </div>
+
+                    <div id="WeighInContentBottom" >
+                        <div></div>
+                        <h1 class="InputTypeText TextCenter" id="WeightStyle">Weight (IN)</h1>
+                        <div id="WeighInWeightTextContainer">
+
+                            <input type="number" name="WI_WeightText" id="WI_WeightText">
+                            <h1 class="InputTypeText" id="WeightKGStyle">KG</h1>
+                        </div>
+
+                       
+                        <div id="WeighButtonContainer" class="ContentCenter"><button id="WeighInButton" type="button">Add Transaction</button></div>
+                    </div>
+                    
+
+                </form>
+
+        
+
+            </div>  
+
+            <div id="WeighOutContainer">
+
+                <div id="WO_InputContainer" class="ContentInvisible">
+                    <div id="WeighOutContent_Container">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                        height="24px" viewBox="0 0 24 24"
+                         width="24px" fill="#000000"
+                         id="WO_BackArrow">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        <div></div>
+                        <div></div>
+                        <div id="WeighOutContentLeft">
+                            <h1 class="InputTypeText">Client Name:</h1>
+                            <h1 class="OutputText" id="WO_ClientNameText">ABAR RICE MILL</h1>
+                            <h1 class="InputTypeText">Location From:</h1>
+                            <h1 class="OutputText" id="WO_LocationFromText">Gift Storage</h1>
+                            <h1 class="InputTypeText">Driver:</h1>
+                            <h1 class="OutputText" id="WO_DriverNameText">Juan</h1>
+                            <h1 class="InputTypeText">Weigh In Date:</h1>
+                            <h1 class="OutputText" id="WO_WeighInDateText">September 27, 2021 03:42 AM</h1>
+                            <h1 class="InputTypeText">Weight (IN)</h1>
+                            <h1 class="OutputText" id="WO_WeightInText">200 KG</h1>
+                        </div>
+                        <hr>
+                        <div id="WeighOutContentRight">
+                            <h1 class="InputTypeText">Transaction Num:</h1>
+                            <h1 class="OutputText" id="WO_TransacNumberText">ABC_124-1</h1>
+                            <h1 class="InputTypeText">Location To:</h1>
+                            <h1 class="OutputText" id="WO_LocationToText">Gift Storage</h1>
+                            <h1 class="InputTypeText">Plate Number:</h1>
+                            <h1 class="OutputText" id="WO_PlateNumberText">ABC_124</h1>
+                            <h1 class="InputTypeText">Transaction Type:</h1>
+                            <h1 class="OutputText" id="WO_TransacTypeText">Deliver</h1>
+                            <h1 class="InputTypeText">Price Per KG:</h1>
+                            <h1 class="OutputText" id="WO_PricePerKGText">₱200</h1>
+                        </div>
+    
+                        <form id="WeighOutContentBottom" >
+                            <div></div>
+                            <h1 class="InputTypeText TextCenter" id="WeightStyle">Weight (OUT)</h1>
+                            <div id="WeighInWeightTextContainer">
+    
+                                <input type="number" name="WO_WeightText" id="WO_WeightText">
+                                <h1 class="InputTypeText" id="WeightKGStyle">KG</h1>
+                            </div>
+    
+                            <div id="WeighButtonContainer" class="ContentCenter"><button id="WeighOutButton" type="button">Update Transaction</button></div>
+                        </form>
+                        
+                    </div>
+                </div>
+                
+
+                <div id="WO_ListContainer" >
+                    <table id="WO_HeaderListContainer">
+                        <tr class="ListHeader">
+                            <th>Client Name</th>
+                            <th>Plate Number</th>
+                            <th>Transaction Type</th>
+                            <th>Weigh In Date</th>
+                            <th>Weight (IN)</th>
+                        </tr>
+                    </table>
+                    
+                    <table id="WO_Table">
+                        <tr class="ListHeader">
+                                <th>Client Name</th>
+                                <th>Plate Number</th>
+                                <th>Transaction Type</th>
+                                <th>Weigh In Date</th>
+                                <th>Weight (IN)</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Maintenance-->
+    <div id="maintenance_Container" class="ContentInvisible">
+        <div id="Maintenance_Container">
+            <div class="topContent"></div>
+           
+            <div id="AddUserContainer" class="ContentInvisible">
+                <form id="addUserForm" method="POST" action="AddUser.php" autocomplete="off"> 
+                    <div id="personalInformationInputContainer">
+                        <div id="nameInput">
+                            <h1 class="InputTypeText">First Name</h1>
+                            <input type="text" name="FnameText" class="InputText" id="FnameText">
+                            <h1 class="InputTypeText">Middle Name</h1>
+                            <input type="text" name="MnameText" class="InputText" id="MnameText">
+                            <h1 class="InputTypeText">Last Name</h1>
+                            <input type="text" name="LnameText" class="InputText" id="LnameText">
+                            <h1 class="InputTypeText">Address</h1>
+                            <input type="text" name="AddressText" class="InputText" id="AddressText">
+                        </div>
+    
+                        <hr>
+    
+                        <div id="personalInformationInput2">
+    
+                            <h1 class="InputTypeText">Civil Status</h1>
+                            <input type="text" name="CivilStatusText" class="InputText" id="CivilStatusText">
+                            <h1 class="InputTypeText">Birth Date</h1>
+                            <div id="birthDateInput">
+                                
+                                <select name="BdateMonth" id="BdateMonth" class="CboxStyle">
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
+    
+                                <select name="BdateDay" id="BdateDay" class="CboxStyle">
+                                    
+                                </select>
+    
+                                <select name="BdateYear" id="BdateYear" class="CboxStyle">
+                                    
+                                </select>
+                            </div>
+                            
+                            <h1 class="InputTypeText">Mobile Num</h1>
+                            <input type="number" name="ContactText" class="InputText" id="ContactText">
+    
+                            <h1 class="InputTypeText">Gender</h1>
+                            <div id="genderRadio" class="doubleColoumnContainer">
+                                
+                                <div class="doubleColoumnContainer">
+                                    <input type="radio" name="Gender" value="Male"  class="RadioMiddle" checked>
+                                    <label >Male</label>
+                                </div>
+                                
+                                <div  class="doubleColoumnContainer">
+                                    <input type="radio" name="Gender" value="Female" class="RadioMiddle">
+                                    <label  >Female</label>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                    
+                       
+    
+                    </div>
+    
+                    <div class="hr"></div>
+                    
+                    <div id="accountInformationInputContainer">
+                        <div id="accountCredentialsInput">
+                            <h1 class="InputTypeText" >User Name</h1>
+                            <input type="text" name="UserNameText" class="InputText" id="UserNameText">
+                            <h1 class="InputTypeText">Password</h1>
+                            <input type="password" name="PasswordText" class="InputText" id="PasswordText">
+                            <h1 class="InputTypeText">Repeat Pass</h1>
+                            <input type="password" name="RepeatPasswordText" class="InputText" id="RepeatPasswordText">
+                            <h1 class="InputTypeText">Authority</h1>
+                            <select id="authorityCbox" class="CboxStyle" name="Authority">
+                                <option value="Admin">Admin</option>
+                                <option value="User">User</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div id="accountCredentialsInput2">
+                            <h1 class="InputTypeText">Email Address</h1>
+                            <input type="text" name="EmailText" class="InputText" id="EmailText">
+                            <h1 class="InputTypeText">User Level</h1>
+                            <input type="text" name="UserLevelText" class="InputText" id="UserLevelText">
+                            <h1 class="InputTypeText">Designation</h1>
+                            <input type="text" name="DesignationText" class="InputText" id="DesignationText">
+                        </div>
+    
+                    </div>
+                    <input type="hidden" name="AddUserActive" value="Active">
+                    <input type="hidden" name="AddedDate" id="AddedDateText">
+                    <input type="hidden" name="AddedBy" id="AddedByText">
+                    <button id="addAccountSubmit" type="button">Add User</button>
+    
+                </form>
+            </div>
+    
+            <div id="AddClientContainer" class="ContentInvisible">
+                <form id="AddClientForm" method="post" action="ClientAdd.php" autocomplete="off">
+                    <h1 class="InputTypeText">Client Name</h1>
+                    <input type="text" class="InputText" id="ClientNameText" name="ClientName" >
+                    <h1 class="InputTypeText" >Company Name</h1>
+                    <input type="text" class="InputText" id="CompanyNameText" name="CompanyName" >
+                    <h1 class="InputTypeText">Address</h1>
+                    <input type="text" class="InputText" id="ClientAddressText" name="ClientAddress" >
+                    <h1 class="InputTypeText">Contact Number</h1>
+                    <input type="number" class="InputText" id="ClientContactNumberText" name="ClientContactNumber">
+                    <input type="hidden" name="AddClientActive" value="Active">
+                    <button type=button id="AddClientSubmit">Add Client</button>
+                    
+                </form>
+                
+                
+                
+            </div>
+    
+            <div id="ListClientContainer"  class="ContentInvisible">
+                <div id="ClientList">
+    
+                    <div id="ClientListContainer2">
+                        <table id="ClientListTable2" scroll="0">
+                            <tr>
+                                <th class="ClientTableHeader">Client Name</td>
+                                <th class="ClientTableHeader">Company</td>
+                                <th class="ClientTableHeader">Mobile Number</td>
+                                <th class="ClientTableHeader">Address</td>
+                            </tr>
+                        </table>
+                    </div>
+        
+                    <div id="ClientListContainer">
+                        <table id="ClientListTable">
+                            <tr>
+                                <th class="ClientTableHeader">Client Name</td>
+                                <th class="ClientTableHeader">Company</td>
+                                <th class="ClientTableHeader">Mobile Number</td>
+                            </tr>
+                        </table>
+        
+                    </div>
+                </div>
+            </div>
+    
+            <div id="PriceScheduleContainer" class="ContentInvisible">
+                <form id="PriceScheduleLayout" method="post" action="PriceSchedule.php">
+                    <div id="PriceScheduleLeftContainer">
+                        <div id="PriceScheduleLeftInContainer">
+                            <div></div>
+                            <div id="PriceScheduleForm">
+                                <div id="PriceScheduleTextInputContainer">
+                                    <h1 class="InputTypeText">Price/KG</h1>
+                                    <input type="text" name="PricePerKgText" class="InputText PStextadjustments" id="PricePerKgText">
+                                    <h1 class="InputTypeText">Start Date</h1>
+                                    <input type="date" name="PriceStartText" class="InputText PStextadjustments" id="PriceStartText" >
+                                </div>
+                                
+                                <input type="hidden" name="PriceScheduleActive" value="Active">
+                                <input type="hidden" name="PriceScheduleSelected" id="PriceScheduleSelected" >
+                            </div>
+                            
+                            
+                            <div id="PriceScheduleSelectionOptionsContainer">
+                                
+                                <h1 class="PriceSchedButtonStyle" id="PriceScheduleApplyToAllButton">Apply To All</h1>
+                                <h1 class="PriceSchedButtonStyle" id="PriceScheduleClearButton">Clear Selection</h1>
+                            </div>
+                        </div>                    
+                        <div></div>
+                        <h1 class="PriceSchedButtonStyle" id="PriceSchedButtonStyle">Update Prices</h1>
+             
+    
+                    </div>
+    
+                    <div id="PriceScheduleList" >
+                        
+                        <div id="PriceSchedContainer2">
+                            <table id="PriceSchedTable2" scroll="0">
+                                <tr>
+                                    <th></th>
+                                    <th class="ClientTableHeader">Client Name</th>
+                                    <th class="ClientTableHeader">Company</th>
+                                    <th class="ClientTableHeader">Price/KG</th>
+                                    <th class="ClientTableHeader">Start Date</th>
+                                    
+                                </tr>
+                            </table>
+        
+                        </div>
+    
+                        <div id="PriceSchedContainer">
+                            <table id="PriceSchedTable">
+                                <tr>
+                                    <th><input type="checkbox"  name="" value="Checked"></th>
+                                    <th class="ClientTableHeader">Client Name</th>
+                                    <th class="ClientTableHeader">Company</th>
+                                    <th class="ClientTableHeader">PHP/KG</th>
+                                    <th class="ClientTableHeader">Start Date</th>
+                                    
+                                </tr>
+                            </table>
+            
+                        </div>
+                    </div>
+                    
+    
+                </form>
+    
+            </div>
+            
+            <div id="MLocationContainer" class="ContentInvisible">
+                <div id="MLocationContentContainer">
+                    <form id="MLocationInputContainer" method="post" action="Location.php">
+                        <input type="text" id="LocationInputText" name="LocationInputText">
+                        <button type="button" id="AddLocationButton">Add Location</button>
+                    </form>
+
+                    <div id="MLocationListContainer">
+                        <h1 id="AddLocationLocationHeader">Locations</h1>
+                        <table id="MlocationList">
+                            
+                        </table>
+                    </div>
+
+                </div>
+                
+            </div>
+    
+        </div>
+    </div>
+
+
+    <script src="Js/Transactions.js"></script>
+    <script src="Js/WeighIn.js"></script>
+    
+    <script src="Js/AddUser.js?version=1"></script>
+    <script src="Js/Maintenance.js?v=1"></script>
+    <script src="Js/AddClient.js?version=1"></script>
+    <script src="Js/PriceSched.js?version=1"></script>
+
+    <script src="Js/index.js?version=1"></script>
+
+    
+</body>
+

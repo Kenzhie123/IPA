@@ -1,0 +1,159 @@
+
+
+#PriceScheduleLayout{
+    height: 100%;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 30% 70%;
+}
+
+#PriceScheduleLeftContainer{
+    margin:5%;
+    box-shadow: 0px 0px 10px 5px gray;
+    border-radius:5px;
+
+    display:grid;
+    grid-template-rows: 40% 50% 10% ;
+    
+    align-items: center;
+    text-align:center;
+}
+
+#PriceScheduleLeftInContainer{
+    display:grid;
+    grid-template-rows: 10% 40% 50%;
+    height:100%;
+}
+#PriceScheduleList{
+    margin:2.5%;
+    box-shadow: 0px 0px 10px 5px gray;
+    border-radius:5px;
+    padding:10px;
+    display: grid;
+    grid-template-rows: 20px 80vh;
+}
+
+#PriceScheduleTextInputContainer{
+    display:grid;
+    grid-template-columns: 35% 60%;
+    grid-template-rows: 1fr 1fr;
+}
+
+#PriceScheduleSelectionOptionsContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:3%;
+}
+
+#PriceScheduleSelectOptionsHeader{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.PStextadjustments{
+    margin:auto;
+    width:90%;
+}
+
+.PriceSchedOptionButton{
+    
+    border: 1px solid #2e2e2e;
+    background-color:#03437731;
+    height:25px;
+    width: 90%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    color:#232f46;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    margin:2%;
+}
+
+.PriceSchedOptionButton:hover{
+    animation: OptionsHoverButton linear 100ms;
+    
+    background-color: #0343778c;
+    color:white;
+}
+.PriceSchedOptionSelected{
+    border: 1px solid #2e2e2e;
+    height:25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    margin:2%;
+    background-color: #017eec;
+    color:white;
+}
+
+
+
+.PriceSchedButtonStyle{
+    display:grid;
+    align-items:center;
+    border: 1px solid #2e2e2e;
+    background-color:#03437731;
+    font-family: sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    color:#232f46;
+    height:25px;
+    margin:3%;
+}
+
+.PriceSchedButtonStyle:hover{
+    animation: HoverButton linear 100ms;
+    cursor: pointer;
+    background-color: #034377;
+    color:white;
+}
+
+#PriceSchedTable{
+    margin-top: -20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#PriceSchedTable2{
+    overflow:hidden;
+    overflow-y: hidden;
+    
+    width: 100%;
+}
+#PriceSchedContainer{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#PriceSchedContainer2{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-right: 2%;
+}
+
+
+@keyframes HoverButton{
+    from{
+        background-color: white;
+        color:#232f46;
+    }
+    to{
+        background-color: #017eec;
+        color:white;
+    }
+}
+
+@keyframes OptionsHoverButton{
+    from{
+        background-color: white;
+        color:#232f46;
+    }
+    to{
+        background-color: #0343778c;
+        color:white;
+    }
+}
+

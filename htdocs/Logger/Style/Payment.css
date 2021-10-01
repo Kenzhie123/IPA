@@ -1,0 +1,144 @@
+
+
+#P_ContentContainer{
+    width:90%;
+    display:grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 5%;
+    margin:2%;
+    height:100%;
+}
+
+#P_ContentContainerLeft{
+    box-shadow: 0px 0px 10px 5px gray;
+    border-radius: 5px;
+    height:90%;
+}
+
+#P_ContentLeft{
+    display: grid;
+    grid-template-rows: 10vh 20vh  50vh 30px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#P_CurrentClientContainer{
+    margin-top: 5%;
+}
+
+#P_CurrentClientHeader{
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#2e2e2e;
+    font-weight: bold;
+}
+
+#P_CurrentClient{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color:gray;
+    font-weight: bold;
+}
+
+#P_SelectDateButton{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.P_Button{
+    border: 1px solid #2e2e2e;
+    background-color:#03437731;
+    font-family: sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    color:#232f46;
+    height:25px;
+}
+
+#P_SelectDateRangeContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px 30px;
+    grid-gap: 2%;
+    align-items:center;
+}
+
+.P_Button:hover
+{
+    animation: HoverButton linear 100ms;
+    background-color: #034377;
+    color: white;
+    cursor: pointer;
+}
+
+#P_ContentContainerRight{
+    box-shadow: 0px 0px 10px 5px gray;
+    border-radius: 5px;
+    height:90%;
+    padding:2%;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+#P_ContainerRightTableA{
+    display:grid;
+    grid-template-rows: 28px 1fr;
+
+}
+
+#P_TableHeaderContainerA{
+    height:25px;
+    overflow:hidden;
+    text-align:center;
+}
+
+#P_TableHeaderA{
+    margin-top: 6px;
+    width:100%;
+}
+
+#P_TableContainerA{
+    margin-top: -20px;
+    
+}
+
+#P_TableA{
+    width:100%;
+    
+}
+
+.P_TableData{
+    text-align:center;
+    font-family: sans-serif;
+    font-size: .9em;
+    color:#2e2e2e;
+}
+
+/*Right Content B */
+
+#P_ContainerRightTableB{
+    margin-top: 15px;
+    display:grid;
+    grid-template-rows: 28px 1fr;
+}
+
+#P_TableHeaderB{
+    width:100%;
+    text-align: center;
+}
+
+#P_TableHeaderContainerB{
+    height:25px;
+    overflow:hidden;
+}
+
+#P_TableContainerB{
+    margin-top: -26px;
+}
+
+#P_TableB{
+    width: 100%;
+    text-align: center;
+}
