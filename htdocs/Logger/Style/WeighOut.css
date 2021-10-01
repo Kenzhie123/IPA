@@ -248,6 +248,8 @@
 }
 
 .WO_PopUpInputText{
+    background-color:#03437731;
+    border-width: 1px;
     height: 20px;
     width:8vw;
     margin:auto;
@@ -272,12 +274,7 @@
     font-family: sans-serif;
 }
 
-#WO_PopUpContinueButton:hover{
-    animation: HoverButton linear 100ms;
-    border: 1px solid #2e2e2e;
-    background-color: #017eec;
-    color:white;
-}
+
 
 #WO_PopUpError{
     font-size: 12px;

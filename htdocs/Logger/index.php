@@ -787,14 +787,14 @@
             
                 <p class="PopUpMessage">Secondary Account Needed</p>
                 <div id="WO_PopUpInputContainer">
-                    <h1 class="PopText">User Name</h1>
-                    <h1 class="PopText">Password</h1>
+                    <h1 class="PopText" >User Name</h1>
+                    <h1 class="PopText" >Password</h1>
                     
                     <input type="text" class ="WO_PopUpInputText" id="WO_PopUpUserName" name="WO_PopUpUserName" >
                     <input type="password" class ="WO_PopUpInputText"  id="WO_PopUpPassword" name="WO_PopUpPassword">
                 </div>
                 <h1 id="WO_PopUpError" class="TextInvisible">User Credentials Incorrect</h1>
-                <button type="button" id="WO_PopUpContinueButton" class="PopUpButtonStyle">Continue</button>
+                <button type="button" id="WO_PopUpContinueButton" class="P_Button">Continue</button>
             </form>
         </div>
         

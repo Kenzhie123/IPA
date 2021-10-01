@@ -87,7 +87,7 @@
 
     if(correct)
     {
-        window.location.replace('http://192.168.18.45:8000/Logger/index.php');
+        window.location.replace('index.php');
         var storage = window.sessionStorage;
         storage.setItem('username', username);
         storage.setItem('password', password);

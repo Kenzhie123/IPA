@@ -48,7 +48,7 @@
         window.sessionStorage.setItem('WO_PopUpRemarks$Temp', WO_PopUpRemarks.replace(/"/g,''));
         window.sessionStorage.setItem('Auth', 0);
 
-        window.location.replace('http://192.168.18.45:8000/Logger/index.php');
+        window.location.replace('index.php');
     }
     
     if(Verified == 1)
@@ -73,6 +73,6 @@
         Reset();
         window.sessionStorage.setItem('Auth', -1);
 
-        window.location.replace('http://192.168.18.45:8000/Logger/index.php');
+        window.location.replace('index.php');
     }
 </script>
